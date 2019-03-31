@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title> Citrus |  Electric Scooter Rentals </title>
+  <link rel="icon" href="{{ url_for('static', filename='lime-logo.jpg') }}">
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+ <style>
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  border-radius: 20px;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#myGif {
+  position: absolute;
+  min-width: 20%;
+  min-height: 20%;
+  top: 31.5%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="{{ url_for('static', filename='Lime.mp4') }}" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div id="index-banner" class="parallax-container" style="/*position: fixed; */
+  top: 20vh;
+  /* left: 50vh; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: auto;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+  margin-left: 15vh;
+  margin-right: 15vh;">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <!-- <br><br> -->
+        <h1 class="header center teal-text text-lighten-2"> Citrus </h1>
+        <div class="row center">
+			<h3 class="header col s12 light">
+				Congratulations {{ username_ret }} !! <br>
+				$1 has been credited to your Citrus wallet <br> 
+			</h3>
+        </div>
+		<video autoplay muted loop id="myGif">
+			<source src="{{ url_for('static', filename='coin.mp4') }}" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+
+		<br><br>			
+        <div class="row center">
+	  <form class="home" action="/" name="home">
+              <button type="submit" id="download-button" class="btn-large waves-effect waves-light teal lighten-1"> Return Home </button>
+          </form>
+
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <br><br><br><br><br><br><br><br><br> -->
+
+
+
+
+  <footer class="page-footer teal">
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+
+  </body>
+</html>
